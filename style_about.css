@@ -1,0 +1,50 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+#about {
+    /* Existing styles for the #about section */
+    position: relative;
+    height: 100vh;
+    background-color: #0a101e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 60%; /* Adjust as needed */
+    padding: 20px;
+}
+
+.about-content h1{
+    font-size: 2em;
+    color: aliceblue;
+    padding-top: 20%;
+    margin-top: -10px;
+}
+
+.about-content h2{
+    color: orange
+}
+
+.about-content p {
+    margin-bottom: 20px; /* Add some bottom margin */
+    color: aliceblue;
+    word-spacing: 2px;
+    line-height: 40px;
+}
+
+.about-image {
+    margin-left: 20px; /* Add some left margin */
+}
+
+.about-image img {
+    width: 100%; /* Ensure image fills its container */
+    max-width: 300px; /* Adjust as needed */
+    border-radius: 10px; /* Add border radius if desired */
+}

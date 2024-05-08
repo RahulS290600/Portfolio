@@ -1,0 +1,124 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif; 
+}
+
+#Home,
+#about,
+#skills {
+    height: 100vh; /* Set height to 100% of viewport height */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-pane {
+    width: 25%; /* Adjust as needed */
+    background-color: #0a101e; /* Left pane background color */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: fixed; /* Fixed position to prevent movement */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.left-pane img{
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+    border-style: double;
+    border-color: aliceblue;
+}
+
+.left-pane p{
+    color:aliceblue;
+    font-size: 40px;
+    text-align: center;
+    padding-right: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.left-pane nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.left-pane nav ul li {
+    padding: 10px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: turquoise;
+}
+
+.left-pane nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: aliceblue;  
+}
+
+nav ul li a::before {
+    content: ''; 
+    position: absolute;
+    bottom: -3px; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: orange;
+    transition: width 1s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.right-pane {
+    width: 75%; /* Adjust as needed */
+    margin-left: 25%; /* Ensure right pane starts after the left pane */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scroll-snap-type: y mandatory;
+}
+
+#Home{
+    position: relative; /* Ensure the section is positioned relatively */
+    height:100%;
+    background-image: url(./Assets/pexels-bess-hamiti-83687-36487.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+#Home h2 {
+    font-size: 3em; /* Adjust as needed */
+    color: aliceblue; /* White color */
+    z-index: 1;
+}
+#Home p {
+    font-size: 1.2em; /* Adjust as needed */
+    color: #fff; /* White color */
+    margin-top: 10px; /* Add some top margin */
+    z-index: 1;
+}
+#Home::before {
+    content: ''; /* Required for the pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    top: 0; /* Position from the top of the section */
+    left: 0; /* Position from the left of the section */
+    width: 100%; /* Cover the entire width of the section */
+    height: 100%; /* Cover the entire height of the section */
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% transparency */
+}
+
